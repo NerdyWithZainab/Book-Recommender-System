@@ -57,7 +57,7 @@ raw_documents = [raw_text]  # Convert to list format expected by text_splitter
 raw_documents = [Document(page_content=text) for text in raw_documents]
 text_splitter = CharacterTextSplitter(separator="\n",chunk_size=0,chunk_overlap=0)
 documents = text_splitter.split_documents(raw_documents)
-db_books = Chroma.from_documents(documents, OpenAIEmbeddings(api_key="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"))
+db_books = Chroma.from_documents(documents, OpenAIEmbeddings(api_key="OPENAI_KEY"))
 
 def retreive_semantic_recommendations(
         query: str,
